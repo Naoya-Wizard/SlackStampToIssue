@@ -6,44 +6,26 @@
 まず、[GitHub](https://github.com/)にログインします。
 2. **設定にアクセス**:
 右上隅にあるプロフィール画像をクリックし、ドロップダウンメニューから「Settings」（設定）を選択します。
-    - 画像
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/b9034b23-3123-467b-a067-b9078d427fe5/Untitled.png)
         
 3. **Developer settingsに移動**:
 設定ページの左側のサイドバーで、「Developer settings」（開発者設定）をクリックします。
-    - 画像
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/8d32def7-86e6-4441-8d41-308ea302219d/Untitled.png)
         
 4. **Personal access tokensにアクセス**:
 「Developer settings」ページのサイドバーから「Personal access tokens」（パーソナルアクセストークン）を選択します。
-    - 画像
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/f9c0f314-0313-47bf-879f-ce950d7d67be/Untitled.png)
         
 5. **新しいトークンを生成**:
 「Generate new token」（新しいトークンを生成）ボタンをクリックします。
-    - 画像
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/1cf50bef-d96a-4b46-bf22-901e16edf3a0/Untitled.png)
         
 6. **有効期限の設定**:
 「Expiration」（有効期限）セクションで、トークンの有効期限を設定します。例えば、「30 days」（30日間）、「60 days」（60日間）、「90 days」（90日間）、「No expiration」（無期限）から選択できます。
 7. **トークンの設定**:
 トークンの名前を入力し（例: **`MyAPIToken`**）、必要なスコープ（アクセス許可）を選択します。例えば、リポジトリに関連する操作を行いたい場合は、「repo」スコープを選択します。GitHubのAPIを使用する目的に応じて適切なスコープを選択してください。
     - **`repo`**: プライベートリポジトリを含む、あなたのリポジトリに対する広範なアクセス権を提供します。このスコープはリポジトリ内でのイシューの作成、閲覧、更新、削除を可能にします。
-    - 画像
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/46c47c43-1e02-4b5a-b05b-660e1c289c7e/Untitled.png)
         
 8. **トークンの生成**:
 ページの下部にある「Generate token」（トークンを生成）ボタンをクリックします。
 9. **トークンのコピーと保存**:
 生成されたトークンが表示されます。このトークンは後で見ることができないので、必ず安全な場所にコピーして保存してください。
-    - 画像
-        
-        ![スクリーンショット 2023-12-02 134359.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/9c666b1c-0332-4df6-87eb-331fd3c01a9d/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2023-12-02_134359.png)
         
 
 ### GitHubのAPIを使ってissueをポストするPythonコード
@@ -114,9 +96,6 @@ print(response)
     ```
     
 
-できたー！　やったー♪
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/8f033544-0b5d-4ab1-b844-c4d2ed6ddcfe/4ec94dcb-ee84-417a-9b83-bc9932db0764/Untitled.png)
 
 ### おまけ：issueにコメントするコード
 
@@ -152,4 +131,3 @@ print(response)
     {'url': 'https://api.github.com/repos/Naoya-Wizard/SlackStampToIssue/issues/comments/1837048816', 'html_url': 'https://github.com/Naoya-Wizard/SlackStampToIssue/issues/1#issuecomment-1837048816', 'issue_url': 'https://api.github.com/repos/Naoya-Wizard/SlackStampToIssue/issues/1', 'id': 1837048816, 'node_id': 'IC_kwDOK0qE585tfyPw', 'user': {'login': 'Naoya-Wizard', 'id': 79356057, 'node_id': 'MDQ6VXNlcjc5MzU2MDU3', 'avatar_url': 'https://avatars.githubusercontent.com/u/79356057?u=f583cb819588c59061dd9c7e71c0d611b10cd8c2&v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/Naoya-Wizard', 'html_url': 'https://github.com/Naoya-Wizard', 'followers_url': 'https://api.github.com/users/Naoya-Wizard/followers', 'following_url': 'https://api.github.com/users/Naoya-Wizard/following{/other_user}', 'gists_url': 'https://api.github.com/users/Naoya-Wizard/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/Naoya-Wizard/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/Naoya-Wizard/subscriptions', 'organizations_url': 'https://api.github.com/users/Naoya-Wizard/orgs', 'repos_url': 'https://api.github.com/users/Naoya-Wizard/repos', 'events_url': 'https://api.github.com/users/Naoya-Wizard/events{/privacy}', 'received_events_url': 'https://api.github.com/users/Naoya-Wizard/received_events', 'type': 'User', 'site_admin': False}, 'created_at': '2023-12-02T05:32:19Z', 'updated_at': '2023-12-02T05:32:19Z', 'author_association': 'OWNER', 'body': 'This is a comment posted to an issue.', 'reactions': {'url': 'https://api.github.com/repos/Naoya-Wizard/SlackStampToIssue/issues/comments/1837048816/reactions', 'total_count': 0, '+1': 0, '-1': 0, 'laugh': 0, 'hooray': 0, 'confused': 0, 'heart': 0, 'rocket': 0, 'eyes': 0}, 'performed_via_github_app': None}
     > 
 
-やったぜー♪
